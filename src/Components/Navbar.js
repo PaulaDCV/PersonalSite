@@ -9,7 +9,7 @@ export  function Navbar({ fixed }) {
         {name: 'About me', href: '/about', current: false},
         {name: 'Projects', href: '/projects', current: false},
         {name: 'Contact me', href: '/contact', current: false},]
-    const prop = useSpring({to: { y: 1 , opacity:1}, from: {y:100, opacity:0}, delay:2000});
+    const prop = useSpring({to: { y: 1 , opacity:1}, from: {y:100, opacity:0}, delay:1000});
     const [navbarOpen, setNavbarOpen] = useState(false);
     return (
         <>
