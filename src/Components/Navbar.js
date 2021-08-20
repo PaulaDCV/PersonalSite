@@ -6,9 +6,9 @@ import {useSpring,animated} from "react-spring";
 export  function Navbar({ fixed }) {
     const items = [
         {name: 'Home', href: '/', current: true},
-        {name: 'About me', href: '/about', current: false},
-        {name: 'Projects', href: '/projects', current: false},
-        {name: 'Contact me', href: '/contact', current: false},]
+        {name: 'About me', href: '/PersonalSite/about', current: false},
+        {name: 'Projects', href: '/PersonalSite/projects', current: false},
+        {name: 'Contact me', href: '/PersonalSite/contact', current: false},]
     const prop = useSpring({to: { y: 1 , opacity:1}, from: {y:100, opacity:0}, delay:1000});
     const [navbarOpen, setNavbarOpen] = useState(false);
     return (
@@ -18,7 +18,7 @@ export  function Navbar({ fixed }) {
               <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                 <NavLink
                   className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-                  to="/"
+                  to="/PersonalSite"
                 >
                   PDCV
                 </NavLink>
