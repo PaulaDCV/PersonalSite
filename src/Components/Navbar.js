@@ -5,7 +5,7 @@ import {useSpring,animated} from "react-spring";
 
 export  function Navbar({ fixed }) {
     const items = [
-        {name: 'Home', href: '/PersonalSite/', current: true},
+        {name: 'Home', href: '/PersonalSite', current: true},
         {name: 'About me', href: '/PersonalSite/about', current: false},
         {name: 'Projects', href: '/PersonalSite/projects', current: false},
         {name: 'Contact me', href: '/PersonalSite/contact', current: false},]
