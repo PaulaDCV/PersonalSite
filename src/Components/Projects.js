@@ -1,4 +1,7 @@
-export function projects()
+export default function Projects()
 {
-    return (<div>projects </div>)
+    return (
+        <div className={"text-white"}>
+            <h1>projects</h1>
+        </div>)
 }
