@@ -17,13 +17,13 @@ export  function Navbar({ fixed }) {
             <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
               <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                 <NavLink
-                  className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+                  className=" text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
                   to="/PersonalSite"
                 >
                   PDCV
                 </NavLink>
                 <button
-                  className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                  className="  text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                   type="button"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
@@ -40,7 +40,7 @@ export  function Navbar({ fixed }) {
                 <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
                     {items.map( (item, index)=><li className="nav-item">
                 <animated.div style ={prop}>
-                <NavLink className="ml-2 px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" activeClassName ="underline" exact  to={item.href} >{item.name}</NavLink>
+                <NavLink className=" transform transition duration-500 hover:scale-150 ml-2 px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" activeClassName ="underline" exact  to={item.href} >{item.name}</NavLink>
                </animated.div>
                 </li>
               )}
