@@ -8,14 +8,15 @@ import Projects from "./Components/Projects";
 import Home from "./Components/Home";
 
 function App() {
+    const props = useSpring({to: {opacity: 1}, from: {opacity: 0}, config:{duration:1000}});
     return (
 
-        <div className="min-h-screen min-w-full  bg-gray-900">
+        <div className="min-h-screen sm:min-w-full  bg-gray-900">
             <Navbar/>
             <div className="min-h-screen flex min min-w-full justify-center content-center">
                 <Switch>
                     <Route exact path="/PersonalSite/">
-                      <Home/>
+                      <Home fadeDiv ={props}/>
                     </Route>
                     <Route exact path="/PersonalSite/about">
                         <About/>
@@ -23,9 +24,7 @@ function App() {
                     <Route exact path="/PersonalSite/contact">
                         <Contact/>
                     </Route>
-                    <Route path="/PersonalSite/projects">
-                        <Projects/>
-                    </Route>
+                    e
                 </Switch>
             </div>
         </div>
