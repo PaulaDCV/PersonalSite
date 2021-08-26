@@ -25,7 +25,7 @@ export default function Home(props) {
             <animated.div style={props.fadeDiv} className=" min-w-full ">
 
                 <div className={" absolute h-screen z-80 "}>
-                <TextTransition className ={" relative top-1/3 bg-gray-900 rounded bg-opacity-40 left-1/3  h-100 bg-gray-600 z-40 transform transition duration-500 hover:scale-150 text-gray-400 uppercase text-2xl p-0  lg:text-7xl sm:text-2xl "}
+                <TextTransition className ={" relative top-1/3 bg-white-600 rounded bg-opacity-40 left-2/3  h-100 z-40 transform transition duration-500 hover:scale-150 text-white  text-2xl p-0  lg:text-7xl sm:text-2xl "}
                     text={"Paula del Castillo Vivero" }
                     springConfig={ presets.default }
                   />
@@ -34,7 +34,7 @@ export default function Home(props) {
                 <div style={{minHeight: 150+"px"}}></div>
                 <div className={"w-full h-screen  flex justify-center items-center"}>
                <div className={" w-full h-screen  relative z-20 "}>
-                <Wave className = {"h-screen w-96 opacity-80 z-0" } fill='#AB4967'
+                <Wave className = {"h-screen w-96 opacity-60 z-0" } fill='#AB4967'
                         paused={false}
                         options={{
                             height:60,
@@ -43,7 +43,7 @@ export default function Home(props) {
                           points: isMobile? 2 : 5
                         }}
                  />
-                 <Wave  className={"  opacity-80 absolute inset-0 flex justify-center items-center z-20"} fill='#71324A'
+                 <Wave  className={"  opacity-60 absolute inset-0 flex justify-center items-center z-20"} fill='#71324A'
                         paused={false}
                         options={{
                             height:90,
@@ -52,7 +52,7 @@ export default function Home(props) {
                           points: isMobile? 2 : 5
                         }}
                   />
-                    <Wave  className={"opacity-80 absolute inset-0 flex justify-center items-center z-10"} fill='#BC8DA0'
+                    <Wave  className={"opacity-60 absolute inset-0 flex justify-center items-center z-10"} fill='#BC8DA0'
                         paused={false}
                         options={{
                             height:70,
