@@ -8,27 +8,33 @@ import TextTransition, { presets } from "react-text-transition";
 export default function Home(props) {
 
     const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
-    const [points, setPoints] = useState(2)
-    const [index, setIndex] = useState(0);
-    const text = ["Paula del Castillo Vivero", "Full-Stack Developer"];
+    const [points, setPoints] = useState(2);
 
-    useEffect(() => {
-    const intervalId = setInterval(() =>
-      setIndex(index => index + 1),
-      3000 // every 3 seconds
-    );
-    return () => clearTimeout(intervalId);
-  }, []);
+    const [hoveredTitle,setHoveredTitle] = useState(
+        isMobile? <div><h1 className={"font-extrabold"}>Paula del Castillo Vivero</h1>< h2 className={"  font-bold text-right"}>Full Stack Developer</h2></div>
+            : <h1 className={"font-extrabold"} >Paula <br/>del Castillo <br/> Vivero</h1> );
+
+    const onMouseEnter = e => {
+      setHoveredTitle(<div><h1 className={"font-extrabold"}>Paula<br/>del Castillo <br/>Vivero</h1>< h2
+          className={" font-bold "}>Full Stack Developer</h2></div>);
+  };
+
+   const onMouseLeave = e => {
+    setHoveredTitle(<h1 className={" font-extrabold"}>Paula <br/>Del Castillo<br/> Vivero</h1>);
+  };
+
     return (
         <div className={"min-w-full flex items-center justify-center"}>
 
             <animated.div style={props.fadeDiv} className=" min-w-full ">
 
                 <div className={" absolute h-screen z-80 "}>
-                <TextTransition className ={" relative top-1/3 bg-white-600 rounded bg-opacity-40 left-2/3  h-100 z-40 transform transition duration-500 hover:scale-150 text-white  text-2xl p-0  lg:text-7xl sm:text-2xl "}
-                    text={"Paula del Castillo Vivero" }
-                    springConfig={ presets.default }
-                  />
+                    <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className={"relative top-1/3 bg-white-600 rounded bg-opacity-40 " +
+                    "  h-100 z-40 transform transition duration-500 hover:scale-150 text-white  text-2xl p-0  lg:text-7xl sm:text-2xl"}>
+                        {hoveredTitle}
+                    </div>
+
+
                 </div>
 
                 <div style={{minHeight: 150+"px"}}></div>
